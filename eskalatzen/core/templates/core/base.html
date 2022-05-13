@@ -31,11 +31,10 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          <li><a href="{% url 'home' %}" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="{% url 'maps' %}" class="nav-link px-2 text-white">Mapa</a></li>
+          <li><a href="{% url 'blog' %}" class="nav-link px-2 text-white">blog</a></li>
+          <li><a href="{% url 'about' %}" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -87,7 +86,7 @@
       </div>
 	</footer>
     <script type="text/javascript" src="{% static 'path/to/your/file.js' %}"></script>
-    <script type="text/javascript" src="{% static 'core/js/map.js' %}"></script>
+<!--    <script type="text/javascript" src="{% static 'core/js/map.js' %}"></script>-->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -20,6 +20,9 @@ from core import views as core_view
 
 urlpatterns = [
     path('', core_view.home, name='home'),
+    path('maps/', core_view.maps, name="maps"),
+    path('blog/', core_view.blog, name="blog"),
+    path('about/', core_view.about, name="about"),
     path('admin/', admin.site.urls),
 ]
 
