@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Weather{% endblock %}
+
+{% block content %}
+<div class="input">
+  <input type="text" placeholder="Enter the city" class="input_text">
+  <input type="submit" value="Submit" class="submit">
+</div>
+
+<div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
+</div>
+<script src="{% static 'core/js/openweathermap.js' %}"></script>
+{% endblock %}

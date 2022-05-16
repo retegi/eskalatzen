@@ -21,8 +21,12 @@ from core import views as core_view
 urlpatterns = [
     path('', core_view.home, name='home'),
     path('maps/', core_view.maps, name="maps"),
+    path('maps/Gipuzkoa/Aritxulegi/', core_view.aritxulegi, name="aritxulegi"),
+    path('maps/Gipuzkoa/Pikoketa/', core_view.pikoketa, name="pikoketa"),
+    path('maps/Gipuzkoa/Putakio/', core_view.putakio, name="putakio"),
     path('blog/', core_view.blog, name="blog"),
     path('about/', core_view.about, name="about"),
+    path('weather/', core_view.weather, name="eguraldia"),
     path('admin/', admin.site.urls),
 ]
 

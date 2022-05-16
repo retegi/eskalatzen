@@ -1,0 +1,98 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Krokisak{% endblock %}
+
+{% block content %}
+    <h1> {{ climbingspot.title }} </h1>
+    <h2> {{ climbingspot.town }} </h2>
+    <div class="container" id="name">
+        <div class="row">
+            <div class="col">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Temperatura</th>
+                      <th scope="col">Haizea</th>
+                      <th scope="col">Describapena</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="temp"></td>
+                      <td class="clouds"></td>
+                      <td class="wind"></td>
+                      <td class="desc"></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Haitz mota</th>
+              <th scope="col">Ekipamendua</th>
+              <th scope="col">Bide kopurua</th>
+              <th scope="col">Zailtasuna</th>
+              <th scope="col">Altuera</th>
+              <th scope="col">Orientazioa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ climbingspot.stone }}</td>
+              <td>Kimikoak, paraboltak</td>
+              <td>101</td>
+              <td>III / 8a</td>
+              <td>10 - 200m </td>
+              <td>Hegoa</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <a href="{{ climbingspot.image1.url }}">
+                        <img src="{{ climbingspot.image1.url }}" style='width:100%;' border="0" alt="image 1">
+                    </a>
+                    <br></br>
+                    <a href="{{ climbingspot.image2.url }}">
+                        <img src="{{ climbingspot.image2.url }}" style='width:100%;' border="0" alt="image 2">
+                    </a>
+                    <br></br>
+                    <a href="{{ climbingspot.image3.url }}">
+                        <img src="{{ climbingspot.image3.url }}" style='width:100%;' border="0" alt="image 3">
+                    </a>
+                    <br></br>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var temp = document.querySelector('.temp');
+    var wind = document.querySelector('.wind');
+    var desc = document.querySelector('.desc');
+    var clouds = document.querySelector('.clouds');
+    var button= document.querySelector('.submit');
+
+
+    window.addEventListener('load', function(name){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q={{ climbingspot.town }}&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+    .then(response => response.json())
+    .then(data => {
+        var tempValue = data['main']['temp'];
+        var windValue = data['wind']['speed'];
+        var nameValue = data['name'];
+        var descValue = data['weather'][0]['description'];
+
+        desc.innerHTML = descValue;
+        temp.innerHTML = tempValue + "&#8451";
+        wind.innerHTML = windValue;
+        input.value ="";
+        })
+    })
+</script>
+{% endblock %}
+
