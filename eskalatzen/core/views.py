@@ -35,5 +35,32 @@ def putakio(request):
     return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
 
 
+def santabarbara(request):
+    climbingspot = ClimbingSpot.objects.get(title="Santa Barbara")
+    return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
+
+
+
+def jentilbaratza(request):
+    climbingspot = ClimbingSpot.objects.get(title="Jentilbaratza")
+    return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
+
+
+def txindoki(request):
+    climbingspot = ClimbingSpot.objects.get(title="Txindoki")
+    return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
+
+
+def jaizkibel(request):
+    climbingspot = ClimbingSpot.objects.get(title="Jaizkibel")
+    return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
+
+
+def amasola(request):
+    climbingspot = ClimbingSpot.objects.get(title="Amasola")
+    return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
+
+
+
 def weather(request):
     return render(request, "core/weather.html")

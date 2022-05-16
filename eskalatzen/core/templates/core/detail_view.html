@@ -54,17 +54,23 @@
         <div class="row">
             <div class="col">
                 <div class="text-center">
-                    <a href="{{ climbingspot.image1.url }}">
-                        <img src="{{ climbingspot.image1.url }}" style='width:100%;' border="0" alt="image 1">
-                    </a>
+                    {% if climbingspot.image1 %}
+                        <a href="{{ climbingspot.image1.url }}">
+                            <img src="{{ climbingspot.image1.url }}" style='width:100%;' border="0" alt="image 1">
+                        </a>
+                    {% endif %}
                     <br></br>
+                    {% if climbingspot.image2 %}
                     <a href="{{ climbingspot.image2.url }}">
                         <img src="{{ climbingspot.image2.url }}" style='width:100%;' border="0" alt="image 2">
                     </a>
+                    {% endif %}
                     <br></br>
+                    {% if climbingspot.image3 %}
                     <a href="{{ climbingspot.image3.url }}">
                         <img src="{{ climbingspot.image3.url }}" style='width:100%;' border="0" alt="image 3">
                     </a>
+                    {% endif %}
                     <br></br>
                 </div>
             </div>
