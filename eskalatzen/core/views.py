@@ -40,7 +40,6 @@ def santabarbara(request):
     return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
 
 
-
 def jentilbaratza(request):
     climbingspot = ClimbingSpot.objects.get(title="Jentilbaratza")
     return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
@@ -59,7 +58,6 @@ def jaizkibel(request):
 def amasola(request):
     climbingspot = ClimbingSpot.objects.get(title="Amasola")
     return render(request, "core/detail_view.html", {'climbingspot': climbingspot})
-
 
 
 def weather(request):
