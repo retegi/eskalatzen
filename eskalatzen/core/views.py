@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ClimbingSpot
+from .models import ClimbingSpot, Weather
 
 
 # Create your views here.
@@ -9,7 +9,8 @@ def home(request):
 
 def maps(request):
     climbingspot = ClimbingSpot.objects.all()
-    return render(request, "core/map.html", {'climbingspot': climbingspot})
+    weather = Weather.objects.all()
+    return render(request, "core/map.html", {'climbingspot': climbingspot, 'weather': weather})
 
 
 def blog(request):

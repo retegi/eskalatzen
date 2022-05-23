@@ -5,31 +5,34 @@
 {% block title %}Krokisak{% endblock %}
 
 {% block content %}
-    <h1> {{ climbingspot.title }} </h1>
-    <h2> {{ climbingspot.town }} </h2>
-    <div class="container" id="name">
+    <div class="fixed-bottom">
+        <button class="btn primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" />
+        </button>
+    </div>
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header" style='padding-bottom: 0'>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" style='padding: 0'>
+          <div class="card-body" id="name" style='padding: 0'>
+              <p><strong> {{ climbingspot.town }}, </strong> {{ climbingspot.title }}</p>
+            <div id="demo3" class="carousel slide" data-ride="carousel">
+              <!-- Carousel inner -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-around text-center mb-4" id="root">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col">
-                <table class="table table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">Temperatura</th>
-                      <th scope="col">Haizea</th>
-                      <th scope="col">Describapena</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="temp"></td>
-                      <td class="clouds"></td>
-                      <td class="wind"></td>
-                      <td class="desc"></td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-        </div>
-        <table class="table table-sm">
+                <table class="table table-sm d-none d-sm-block">
           <thead>
             <tr>
               <th scope="col">Haitz mota</th>
@@ -51,6 +54,8 @@
             </tr>
           </tbody>
         </table>
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <div class="text-center">
@@ -77,26 +82,47 @@
         </div>
     </div>
 <script>
+    var weather = document.querySelector('.weather');
     var temp = document.querySelector('.temp');
     var wind = document.querySelector('.wind');
-    var desc = document.querySelector('.desc');
-    var clouds = document.querySelector('.clouds');
-    var button= document.querySelector('.submit');
-
+    var icon = document.querySelector('.icon');
+    var datetime = document.querySelector('.datetime');
 
     window.addEventListener('load', function(name){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q={{ climbingspot.town }}&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+    fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ climbingspot.latitude }}&&lon={{ climbingspot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
     .then(response => response.json())
     .then(data => {
-        var tempValue = data['main']['temp'];
-        var windValue = data['wind']['speed'];
-        var nameValue = data['name'];
-        var descValue = data['weather'][0]['description'];
+        console.log(data);
+        var days = ['Ig','Al','Ar','As','Og','Ol','lr'];
+        var dateFromTimeStamp = new Date(data['daily'][0]['dt'] * 1000);
+        var tempValue = data['daily'][0]['temp']['day'];
+        var windValue = data['daily'][0]['wind_speed'];
+        var iconValue = data['daily'][0]['weather'][0]['icon'];
+        //temp.innerHTML = tempValue + "&#8451";
+        //wind.innerHTML = windValue;
+        var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png";
+        //document.getElementById("image").src="http://openweathermap.org/img/wn/"+iconValue+"@2x.png";
+        //datetime.innerHTML = dateFromTimeStamp.toISOString().slice(0, 10);
+        const root = document.getElementById('root');
 
-        desc.innerHTML = descValue;
-        temp.innerHTML = tempValue + "&#8451";
-        wind.innerHTML = windValue;
-        input.value ="";
+        var html = "";
+        for (var i=0;i<7;i++) {
+            var dateFromTimeStamp = new Date(data['daily'][i]['dt'] * 1000);
+            if (i < 3)
+            {
+                html += "<div class='flex-column'>"
+            }
+            else
+            {
+                html += "<div class='flex-column d-none d-sm-block'>"
+            }
+            html += "<p style='margin-bottom: 0'>" + data['daily'][i]['temp']['day'] + "</p>" +
+            "<img src="+img+"></img>" +
+            "<p style='margin-bottom: 0'>" + days[dateFromTimeStamp.getDay()] + "</p>" +
+            "</div>";
+        }
+        root.innerHTML = html;
+
         })
     })
 </script>

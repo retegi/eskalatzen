@@ -11,6 +11,7 @@ class ClimbingSpot(models.Model):
     latitude = models.FloatField(null=True, blank=True, verbose_name='Latitudea')
     longitude = models.FloatField(null=True, blank=True, verbose_name='Longitudea')
     stone = models.CharField(max_length=200, null=True, blank=True, verbose_name='Harria')
+    difficulty = models.CharField(max_length=200, null=True, blank=True, verbose_name='Zailtasuna')
     description = models.TextField(null=True, blank=True, verbose_name='Deskribapena')
     image1 = models.ImageField(null=True, blank=True, verbose_name='Irudia 1', upload_to="projects")
     image2 = models.ImageField(null=True, blank=True, verbose_name='Irudia 2', upload_to="projects")
@@ -26,3 +27,19 @@ class ClimbingSpot(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Weather(models.Model):
+    town = models.CharField(max_length=200, null=True, blank=True, verbose_name='Herria')
+    latitude = models.FloatField(null=True, blank=True, verbose_name='Latitudea')
+    longitude = models.FloatField(null=True, blank=True, verbose_name='Longitudea')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Sortze data')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Edizio data')
+
+    class Meta:
+        verbose_name = "Eguraldia"
+        verbose_name_plural = "Eguraldia"
+        ordering = ["created"]
+
+    def __str__(self):
+        return self.town

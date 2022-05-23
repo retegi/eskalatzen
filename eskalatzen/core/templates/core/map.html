@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Mapa{% endblock %}
+{% block title %}Hasiera{% endblock %}
 
 {% block content %}
     <div id="map" style="width: 1460x; height: 525px; position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
@@ -76,13 +76,46 @@
             tileSize: 512,
             zoomOffset: -1
         }).addTo(map);
-
         {% for spot in climbingspot %}
             var marker = L.marker([{{ spot.latitude }},{{ spot.longitude }}]).addTo(map)
-                .bindPopup('<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>{{ spot.latitude }},{{ spot.longitude }}').openPopup();
+                .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                "Arkaitza: {{ spot.stone }} <br>" +
+                "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                );
         {% endfor %}
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize:     [95, 95],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                popupAnchor:  [-3, -76]
+            }
+        });
+
+        {% for spot in weather %}
+
+        window.addEventListener('load', function(name){
+            fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+            .then(response => response.json())
+            .then(data => {
+            var iconValue = data['daily'][0]['weather'][0]['icon'];
+            var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png"
+            console.log(img);
+            console.log('{{ spot.town }}');
+            var weatherIcon = new LeafIcon({iconUrl: img});
+            var weather_marker = L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).addTo(map);
+            })
+        })
+        {% endfor %}
+        L.control.locate({
+            flyTo: true,
+            keepCurrentZoomLevel: true,
+            initialZoomLevel: 10
+            }).addTo(map);
 
         map.on('click', onMapClick);
     </script>
 {% endblock %}
+
 
