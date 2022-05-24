@@ -97,16 +97,13 @@
         var dateFromTimeStamp = new Date(data['daily'][0]['dt'] * 1000);
         var tempValue = data['daily'][0]['temp']['day'];
         var windValue = data['daily'][0]['wind_speed'];
-        var iconValue = data['daily'][0]['weather'][0]['icon'];
-        //temp.innerHTML = tempValue + "&#8451";
-        //wind.innerHTML = windValue;
-        var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png";
-        //document.getElementById("image").src="http://openweathermap.org/img/wn/"+iconValue+"@2x.png";
-        //datetime.innerHTML = dateFromTimeStamp.toISOString().slice(0, 10);
         const root = document.getElementById('root');
 
         var html = "";
         for (var i=0;i<7;i++) {
+            var iconValue = data['daily'][i]['weather'][0]['icon'];
+            var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png";
+
             var dateFromTimeStamp = new Date(data['daily'][i]['dt'] * 1000);
             if (i < 3)
             {
