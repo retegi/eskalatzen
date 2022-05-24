@@ -67,6 +67,58 @@
     </div>
     <script type="text/javascript">
         var map = L.map('map').setView([43.261290083983944, -1.9529219919471679], 10);
+        var markers = L.markerClusterGroup();
+        var markersWeather = L.markerClusterGroup();
+        //osm layer
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+        // map.addLayer(osm)
+
+        // water color
+        var watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            minZoom: 1,
+            maxZoom: 16,
+            ext: 'jpg'
+        });
+        // watercolor.addTo(map)
+
+        // dark map
+        var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        });
+        // dark.addTo(map)
+        // google street
+        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        // googleStreets.addTo(map);
+
+        //google satellite
+        googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        // googleSat.addTo(map)
+
+        /*==============================================
+                        LAYER CONTROL
+        ================================================*/
+        var baseMaps = {
+            "OSM": osm,
+            "Water color map": watercolor,
+            'Dark': dark,
+            'Google Street': googleStreets,
+            "Google Satellite": googleSat,
+        };
+
+        // map.removeLayer(singleMarker)
 
         var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             maxZoom: 18,
@@ -76,25 +128,9 @@
             tileSize: 512,
             zoomOffset: -1
         }).addTo(map);
+
+
         {% for spot in climbingspot %}
-            var marker = L.marker([{{ spot.latitude }},{{ spot.longitude }}]).addTo(map)
-                .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
-                "Arkaitza: {{ spot.stone }} <br>" +
-                "Zailtasuna: {{ spot.difficulty }} III / 8a"
-                );
-        {% endfor %}
-
-        var LeafIcon = L.Icon.extend({
-            options: {
-                iconSize:     [95, 95],
-                shadowSize:   [50, 64],
-                iconAnchor:   [22, 94],
-                popupAnchor:  [-3, -76]
-            }
-        });
-
-        {% for spot in weather %}
-
         window.addEventListener('load', function(name){
             fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
             .then(response => response.json())
@@ -104,17 +140,49 @@
             console.log(img);
             console.log('{{ spot.town }}');
             var weatherIcon = new LeafIcon({iconUrl: img});
-            var weather_marker = L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).addTo(map);
+            markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                "Arkaitza: {{ spot.stone }} <br>" +
+                "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                ));
+
             })
         })
+        markers.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}])
+                    .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                "Arkaitza: {{ spot.stone }} <br>" +
+                "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                ));
         {% endfor %}
+        map.addLayer(markers);
+        map.addLayer(markersWeather);
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize:     [95, 95],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                popupAnchor:  [-3, -76]
+            }
+        });
+    var overlayMaps = {
+        "Eskalada guneak": markers,
+        "Eguraldia": markersWeather
+    };
+
+
+    L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
+
+
+
         L.control.locate({
             flyTo: true,
             keepCurrentZoomLevel: true,
             initialZoomLevel: 10
             }).addTo(map);
+        map.on('mouseover', function () {
+        console.log('your mouse is over the map')
+        })
 
-        map.on('click', onMapClick);
     </script>
 {% endblock %}
 

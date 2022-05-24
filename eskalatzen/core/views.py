@@ -13,6 +13,11 @@ def maps(request):
     return render(request, "core/map.html", {'climbingspot': climbingspot, 'weather': weather})
 
 
+def lista(request):
+    climbingspot = ClimbingSpot.objects.all()
+    return render(request, "core/lista.html", {'climbingspot': climbingspot, 'weather': weather})
+
+
 def blog(request):
     return render(request, "core/blog.html")
 

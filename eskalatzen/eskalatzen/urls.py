@@ -28,6 +28,7 @@ urlpatterns = [
     path('Gipuzkoa/Jaizkibel/', core_view.jaizkibel, name="Jaizkibel"),
     path('Gipuzkoa/Jentilbaratza/', core_view.jentilbaratza, name="Jentilbaratza"),
     path('Gipuzkoa/Amasola/', core_view.amasola, name="Jentilbaratza"),
+    path('lista/', core_view.lista, name="lista"),
     path('blog/', core_view.blog, name="blog"),
     path('about/', core_view.about, name="about"),
     path('weather/', core_view.weather, name="eguraldia"),

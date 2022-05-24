@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Herrialdea</th>
+          <th scope="col">Autonomi Erkidegoa</th>
+          <th scope="col">Probintzia</th>
+          <th scope="col">Herria</th>
+          <th scope="col">Arkaitza</th>
+          <th scope="col">Zailtasuna</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for spot in climbingspot %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{spot.country}}</td>
+          <td>{{spot.ccaa}}</td>
+          <td>{{spot.province}}</td>
+          <td>{{spot.town}}</td>
+          <td><a href="{{ spot.province }}/{{ spot.title }}">{{spot.title}}</a></td>
+          <td>{{spot.stone}}</td>
+          <td>{{spot.difficulty}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

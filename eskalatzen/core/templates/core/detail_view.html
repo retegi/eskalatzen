@@ -93,7 +93,7 @@
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        var days = ['Ig','Al','Ar','As','Og','Ol','lr'];
+        var days = ['Igandea','Astelehena','Asteartea','Asteazkena','Osteguna','Ostirala','larunbata'];
         var dateFromTimeStamp = new Date(data['daily'][0]['dt'] * 1000);
         var tempValue = data['daily'][0]['temp']['day'];
         var windValue = data['daily'][0]['wind_speed'];
@@ -116,7 +116,7 @@
             {
                 html += "<div class='flex-column d-none d-sm-block'>"
             }
-            html += "<p style='margin-bottom: 0'>" + data['daily'][i]['temp']['day'] + "</p>" +
+            html += "<p style='margin-bottom: 0'>" + data['daily'][i]['temp']['day'] + "&#8451</p>" +
             "<img src="+img+"></img>" +
             "<p style='margin-bottom: 0'>" + days[dateFromTimeStamp.getDay()] + "</p>" +
             "</div>";
