@@ -106,23 +106,7 @@
             }
         });
         var markersWeather = L.markerClusterGroup();
-        var markersCamping = L.markerClusterGroup({
-            iconCreateFunction: function(cluster) {
-                 var childCount = cluster.getChildCount();
-                 var c = ' marker-cluster-';
-                 if (childCount < 10) {
-                   c += 'medium';
-                 }
-                 else if (childCount < 100) {
-                   c += 'medium';
-                 }
-                 else {
-                   c += 'medium';
-                 }
-                return new L.divIcon({ html: '<div><span>' + childCount + '</span></div>',
-                                        className: 'marker-cluster' + c, iconSize: new L.Point(40, 40)  });
-            }
-        });
+
         //osm layer
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -172,8 +156,6 @@
             "Google Satellite": googleSat,
         };
 
-        // map.removeLayer(singleMarker)
-
         var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             maxZoom: 10,
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -182,15 +164,6 @@
             tileSize: 512,
             zoomOffset: -1
         }).addTo(map);
-
-        ////// Camping
-        var LeafIconCamping = L.Icon.extend({
-            options: {
-                iconSize:     [50, 50],
-                iconAnchor:   [0, 0],
-                popupAnchor:  [-0, -0]
-            }
-        });
 
 
         {% for spot in mapblog %}
@@ -219,7 +192,6 @@
         {% endfor %}
         map.addLayer(markers);
         map.addLayer(markersWeather);
-        map.addLayer(markersCamping);
 
         var LeafIcon = L.Icon.extend({
             options: {
@@ -231,8 +203,7 @@
         });
         var overlayMaps = {
             "Eskalada guneak": markers,
-            "Eguraldia": markersWeather,
-            "Kanpina": markersCamping
+            "Eguraldia": markersWeather
         };
 
         L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
