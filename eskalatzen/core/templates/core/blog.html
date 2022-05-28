@@ -2,8 +2,251 @@
 
 {% load static %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}Hasiera{% endblock %}
 
 {% block content %}
-hola
+    <style>
+        .marker-cluster-small {
+        background-color: rgba(50, 94, 244, 0.6);
+        }
+        .marker-cluster-small div {
+        background-color: rgba(50, 36, 242, 0.6);
+        }
+        .marker-cluster-medium {
+        background-color: rgba(241, 211, 87, 0.6);
+        }
+        .marker-cluster-medium div {
+        background-color: rgba(240, 194, 12, 0.6);
+        }
+
+        .marker-cluster-large {
+        background-color: rgba(253, 156, 115, 0.6);
+        }
+        .marker-cluster-large div {
+        background-color: rgba(241, 128, 23, 0.6);
+        }
+    </style>
+    <div id="map" style="width: 1460x; height: 525px; position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
+        <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+          <div class="leaflet-pane leaflet-tile-pane">
+            <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+              <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);">
+                <img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/12/2046/1361?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(-200px, -347px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/12/2047/1361?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(312px, -347px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/12/2046/1362?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(-200px, 165px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/12/2047/1362?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" class="leaflet-tile leaflet-tile-loaded" style="width: 512px; height: 512px; transform: translate3d(312px, 165px, 0px); opacity: 1;">
+              </div>
+            </div>
+          </div>
+        <div class="leaflet-pane leaflet-overlay-pane">
+          <svg pointer-events="none" class="leaflet-zoom-animated" width="720" height="480" style="transform: translate3d(-60px, -40px, 0px);" viewBox="-60 -40 720 480"><g>
+            <path class="leaflet-interactive" stroke="red" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#f03" fill-opacity="0.5" fill-rule="evenodd" d="M141.20355555554852,171.94704600190744a42,42 0 1,0 84,0 a42,42 0 1,0 -84,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff" fill-opacity="0.2" fill-rule="evenodd" d="M358 163L474 219L550 153z"></path></g>
+          </svg>
+        </div>
+        <div class="leaflet-pane leaflet-shadow-pane">
+          <img src="https://unpkg.com/leaflet@1.8.0/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(300px, 247px, 0px);" alt=""></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.8.0/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(300px, 247px, 0px); z-index: 247;" alt="Marker" tabindex="0" role="button">
+        </div>
+        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+          <div class="leaflet-pane leaflet-popup-pane">
+            <div class="leaflet-popup  leaflet-zoom-animated" style="opacity: 1; transform: translate3d(300px, 125px, 0px); bottom: -7px; left: -97px;">
+              <div class="leaflet-popup-content-wrapper">
+                <div class="leaflet-popup-content" style="width: 148px;">I am a standalone popup.
+                </div>
+              </div>
+              <div class="leaflet-popup-tip-container">
+                <div class="leaflet-popup-tip">
+                </div>
+              </div>
+              <a class="leaflet-popup-close-button" role="button" aria-label="Close popup" href="#close"><span aria-hidden="true">×</span></a>
+            </div>
+          </div>
+          <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(1048050px, 697379px, 0px) scale(4096);">
+          </div>
+        </div>
+        <div class="leaflet-control-container">
+          <div class="leaflet-top leaflet-left">
+            <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+              <a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a>
+              <a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a>
+            </div>
+          </div>
+          <div class="leaflet-top leaflet-right">
+          </div>
+          <div class="leaflet-bottom leaflet-left">
+          </div>
+          <div class="leaflet-bottom leaflet-right">
+          <div class="leaflet-control-attribution leaflet-control">
+            <a href="https://leafletjs.com" title="A JavaScript library for interactive maps">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8">
+                <path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
+                <path fill="#FFD500" d="M0 4h12v3H0z"></path>
+                <path fill="#E0BC00" d="M0 7h12v1H0z"></path>
+              </svg> Leaflet</a> <span aria-hidden="true">|</span> Map data ©
+            <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery ©
+            <a href="https://www.mapbox.com/">Mapbox</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+        var map = L.map('map').setView([40.261290083983944, -2.9529219919471679], 6);
+        var markers = L.markerClusterGroup({
+            iconCreateFunction: function(cluster) {
+                 var childCount = cluster.getChildCount();
+                 var c = ' marker-cluster-';
+                 if (childCount < 10) {
+                   c += 'small';
+                 }
+                 else if (childCount < 100) {
+                   c += 'small';
+                 }
+                 else {
+                   c += 'small';
+                 }
+                return new L.divIcon({ html: '<div><span>' + childCount + '</span></div>',
+                                        className: 'marker-cluster' + c, iconSize: new L.Point(40, 40)  });
+            }
+        });
+        var markersWeather = L.markerClusterGroup();
+        var markersCamping = L.markerClusterGroup({
+            iconCreateFunction: function(cluster) {
+                 var childCount = cluster.getChildCount();
+                 var c = ' marker-cluster-';
+                 if (childCount < 10) {
+                   c += 'medium';
+                 }
+                 else if (childCount < 100) {
+                   c += 'medium';
+                 }
+                 else {
+                   c += 'medium';
+                 }
+                return new L.divIcon({ html: '<div><span>' + childCount + '</span></div>',
+                                        className: 'marker-cluster' + c, iconSize: new L.Point(40, 40)  });
+            }
+        });
+        //osm layer
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+        // map.addLayer(osm)
+
+        // water color
+        var watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            minZoom: 1,
+            maxZoom: 16,
+            ext: 'jpg'
+        });
+        // watercolor.addTo(map)
+
+        // dark map
+        var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        });
+        // dark.addTo(map)
+        // google street
+        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        // googleStreets.addTo(map);
+
+        //google satellite
+        googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        // googleSat.addTo(map)
+
+        /*==============================================
+                        LAYER CONTROL
+        ================================================*/
+        var baseMaps = {
+            "OSM": osm,
+            "Water color map": watercolor,
+            'Dark': dark,
+            'Google Street': googleStreets,
+            "Google Satellite": googleSat,
+        };
+
+        // map.removeLayer(singleMarker)
+
+        var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 10,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(map);
+
+        ////// Camping
+        var LeafIconCamping = L.Icon.extend({
+            options: {
+                iconSize:     [50, 50],
+                iconAnchor:   [0, 0],
+                popupAnchor:  [-0, -0]
+            }
+        });
+
+
+        {% for spot in mapblog %}
+        window.addEventListener('load', function(name){
+            fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+            .then(response => response.json())
+            .then(data => {
+            var iconValue = data['daily'][0]['weather'][0]['icon'];
+            var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png"
+            console.log(img);
+            console.log('{{ spot.town }}');
+            var weatherIcon = new LeafIcon({iconUrl: img});
+            markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                "Arkaitza: {{ spot.stone }} <br>" +
+                "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                ));
+
+            })
+        })
+
+        markers.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}])
+                    .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                "Arkaitza: {{ spot.stone }} <br>" +
+                "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                ));
+        {% endfor %}
+        map.addLayer(markers);
+        map.addLayer(markersWeather);
+        map.addLayer(markersCamping);
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize:     [95, 95],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                popupAnchor:  [-3, -76]
+            }
+        });
+        var overlayMaps = {
+            "Eskalada guneak": markers,
+            "Eguraldia": markersWeather,
+            "Kanpina": markersCamping
+        };
+
+        L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
+
+        L.control.locate({
+            flyTo: true,
+            keepCurrentZoomLevel: true,
+            initialZoomLevel: 10
+            }).addTo(map);
+        map.on('mouseover', function () {
+        console.log('your mouse is over the map')
+        })
+
+    </script>
 {% endblock %}
+
+

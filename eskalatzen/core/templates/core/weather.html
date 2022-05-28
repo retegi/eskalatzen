@@ -2,21 +2,90 @@
 
 {% load static %}
 
-{% block title %}Weather{% endblock %}
+{% block title %}Euskalmet{% endblock %}
 
 {% block content %}
-<div class="input">
-  <input type="text" placeholder="Enter the city" class="input_text">
-  <input type="submit" value="Submit" class="submit">
-</div>
 
-<div class="container">
-    <div class="card">
-      <h1 class="name" id="name"></h1>
-      <p class="temp"></p>
-      <p class="clouds"></p>
-      <p class="desc"></p>
-    </div>
-</div>
-<script src="{% static 'core/js/openweathermap.js' %}"></script>
+<div id="root"></div>
+<script>
+//  regionId: basque_country
+//  regionZoneId:
+//      cantabrian_mountains
+//      cantabrian_valleys
+//      coast_zone
+//      donostialdea
+//      ebro_valley
+//      great_bilbao
+//      interior_basins
+//      pyrenees
+//      southern_mountain
+//      vitoria_gasteiz
+
+window.addEventListener("load", function meteoStationReadings() {
+  var headers =
+  {
+    'accept':'application/json',
+    'Authorization': "Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtZXQwMS5hcGlrZXkiLCJpc3MiOiJUZWNuYWxpYSIsImV4cCI6MTY3NjIwNDc1OCwidmVyc2lvbiI6IjEuMC4wIiwiaWF0IjoxNjM4NDQ3OTU4LCJlbWFpbCI6ImFwcHMuaW5mcmEudGVjbmFsaWFAZ21haWwuY29tIn0.eVQczqFuUDXqSqE4bbc8XYxTxBuNnlJWnpf2dKd2cj9CNFJ6U6N3svz5rFrgpGqskwhkqEo4Bi7w-zgxFu4x_tYzeMX351guT0AFBjVWikCHXXRrPDf1rMJkTD_rNScIFyHHqhXdZ31vE8iJ9Z8zQiAFBUa8bkyehqX-C_96-CQmBBEh4bWW_P6-5nSMrrHH19-8dhT9bGeInXxPnGKBFqiwjJfsrqhpi4Ee6lvCyyeQD0ZJmnRozzqlr80r9N61WwHdWXpez3pdxElFsZ-zOkixkztqo157eTvRyPA1GchX1K3eTkQsLWPExtIZwcydXIYnxH1glWPIKLycLAfiOQ"
+
+  };
+  var options = {
+    'method' : 'get',
+    'contentType': 'application/json',
+    'headers': headers,
+    'muteHttpExceptions': true
+  };
+
+  var urls = "https://api.euskadi.eus/euskalmet/readings/forStation/B090/HA05/measures/measuresForAir/humidity/at/2022/05/26"
+  const response = fetch(urls, options);
+
+  fetch(urls, options)
+  .then(response => response.json())
+  .then(data => {console.log(data)});
+
+}, false);
+
+window.addEventListener("load", function meteoForecast() {
+  var headers =
+  {
+    'accept':'application/json',
+    'Authorization': "Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtZXQwMS5hcGlrZXkiLCJpc3MiOiJUZWNuYWxpYSIsImV4cCI6MTY3NjIwNDc1OCwidmVyc2lvbiI6IjEuMC4wIiwiaWF0IjoxNjM4NDQ3OTU4LCJlbWFpbCI6ImFwcHMuaW5mcmEudGVjbmFsaWFAZ21haWwuY29tIn0.eVQczqFuUDXqSqE4bbc8XYxTxBuNnlJWnpf2dKd2cj9CNFJ6U6N3svz5rFrgpGqskwhkqEo4Bi7w-zgxFu4x_tYzeMX351guT0AFBjVWikCHXXRrPDf1rMJkTD_rNScIFyHHqhXdZ31vE8iJ9Z8zQiAFBUa8bkyehqX-C_96-CQmBBEh4bWW_P6-5nSMrrHH19-8dhT9bGeInXxPnGKBFqiwjJfsrqhpi4Ee6lvCyyeQD0ZJmnRozzqlr80r9N61WwHdWXpez3pdxElFsZ-zOkixkztqo157eTvRyPA1GchX1K3eTkQsLWPExtIZwcydXIYnxH1glWPIKLycLAfiOQ"
+  };
+  var options = {
+    'method' : 'get',
+    'contentType': 'application/json',
+    'headers': headers,
+    'muteHttpExceptions': true
+  };
+  const options_ = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+  var today = new Date();
+  console.log(today.toLocaleString(undefined, options_));
+  console.log(today);
+  var month = today.getMonth() + 1;
+  if (month < 10)
+  {month = "0" + month};
+
+  var date = today.getFullYear() + "/" + month + "/" + today.getDate();
+  var date2 = today.getFullYear() + month + today.getDate();
+  console.log(date);
+  var urls = "https://api.euskadi.eus/euskalmet/weather/regions/basque_country/forecast/at/" + date + "/for/" + date2;
+  console.log(urls);
+
+  const response = fetch(urls, options);
+
+  fetch(urls, options)
+  .then(response => response.json())
+  .then(data => {
+        const root = document.getElementById('root');
+
+        console.log(data);
+        console.log(data['forecastTextByLang']['BASQUE']);
+        var forecastTextBasque = data['forecastTextByLang']['BASQUE'];
+        var html = "<p>" + forecastTextBasque + "</p>";
+        root.innerHTML = html;
+
+        });
+
+}, false);
+</script>
 {% endblock %}

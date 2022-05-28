@@ -6,34 +6,59 @@
 
 {% block content %}
 
-<div class="container">
-  <table class="table">
+<div class="container" style="width:800px; margin:0 auto; text-align: center;">
+  <table class="table" style="width:50%" >
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Herrialdea</th>
-          <th scope="col">Autonomi Erkidegoa</th>
-          <th scope="col">Probintzia</th>
-          <th scope="col">Herria</th>
-          <th scope="col">Arkaitza</th>
-          <th scope="col">Zailtasuna</th>
+          <th scope="col">Puntuazioa</th>
+          <th scope="col" class="d-none d-sm-block">Herrialdea</th>
+          <th scope="col" class="d-none d-sm-block">Autonomi Erkidegoa</th>
+          <th scope="col" class="d-none d-sm-block">Probintzia</th>
+          <th scope="col" class="d-none d-sm-block">Herria</th>
+          <th scope="col">Sektorea</th>
+          <th scope="col" class="d-none d-sm-block">Arkaitza</th>
+          <th scope="col" class="d-none d-sm-block">Zailtasuna</th>
         </tr>
       </thead>
       <tbody>
       {% for spot in climbingspot %}
         <tr>
-          <th scope="row">{{ forloop.counter }}</th>
-          <td>{{spot.country}}</td>
-          <td>{{spot.ccaa}}</td>
-          <td>{{spot.province}}</td>
-          <td>{{spot.town}}</td>
+          <td scope="row">{{ forloop.counter }}</td>
+            <td>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1star"></span>
+                <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2star"></span>
+                <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3star"></span>
+                <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4star"></span>
+                <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5star"></span>
+            </td>
+          <td class="d-none d-sm-block">{{spot.country}}</td>
+          <td class="d-none d-sm-block">{{spot.ccaa}}</td>
+          <td class="d-none d-sm-block">{{spot.province}}</td>
+          <td class="d-none d-sm-block">{{spot.town}}</td>
           <td><a href="{{ spot.province }}/{{ spot.title }}">{{spot.title}}</a></td>
-          <td>{{spot.stone}}</td>
-          <td>{{spot.difficulty}}</td>
+          <td class="d-none d-sm-block">{{spot.stone}}</td>
+          <td class="d-none d-sm-block">{{spot.difficulty}}</td>
         </tr>
       {% endfor %}
       </tbody>
     </table>
 </div>
-
+<script type="text/javascript">
+var contador;
+let start = []
+function calificar(item){
+    contador = item.id[0];
+    console.log(item);
+    let nombre = item.id.substring(1);
+    for (let i=0;i<5;i++){
+        if (i<contador){
+            document.getElementById((i+1)+nombre).style.color="orange";
+        }else{
+            document.getElementById((i+1)+nombre).style.color="black";
+        }
+    }
+}
+</script>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ClimbingSpot, Weather
+from .models import ClimbingSpot, Camping, Video, MapBlog
 
 
 # Create your views here.
@@ -9,8 +9,8 @@ def home(request):
 
 def maps(request):
     climbingspot = ClimbingSpot.objects.all()
-    weather = Weather.objects.all()
-    return render(request, "core/map.html", {'climbingspot': climbingspot, 'weather': weather})
+    camping = Camping.objects.all()
+    return render(request, "core/map.html", {'climbingspot': climbingspot, 'camping': camping})
 
 
 def lista(request):
@@ -18,8 +18,14 @@ def lista(request):
     return render(request, "core/lista.html", {'climbingspot': climbingspot, 'weather': weather})
 
 
+def news(request):
+    climbingspot = ClimbingSpot.objects.all()
+    return render(request, "core/news.html")
+
+
 def blog(request):
-    return render(request, "core/blog.html")
+    mapblog = MapBlog.objects.all()
+    return render(request, "core/blog.html", {'mapblog': mapblog})
 
 
 def about(request):
@@ -68,3 +74,8 @@ def amasola(request):
 
 def weather(request):
     return render(request, "core/weather.html")
+
+
+def video(request):
+    videos = Video.objects.all()
+    return render(request, "core/video.html", {'videos': videos})

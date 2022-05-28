@@ -5,6 +5,27 @@
 {% block title %}Hasiera{% endblock %}
 
 {% block content %}
+    <style>
+        .marker-cluster-small {
+        background-color: rgba(50, 94, 244, 0.6);
+        }
+        .marker-cluster-small div {
+        background-color: rgba(50, 36, 242, 0.6);
+        }
+        .marker-cluster-medium {
+        background-color: rgba(241, 211, 87, 0.6);
+        }
+        .marker-cluster-medium div {
+        background-color: rgba(240, 194, 12, 0.6);
+        }
+
+        .marker-cluster-large {
+        background-color: rgba(253, 156, 115, 0.6);
+        }
+        .marker-cluster-large div {
+        background-color: rgba(241, 128, 23, 0.6);
+        }
+    </style>
     <div id="map" style="width: 1460x; height: 525px; position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
         <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
           <div class="leaflet-pane leaflet-tile-pane">
@@ -67,8 +88,41 @@
     </div>
     <script type="text/javascript">
         var map = L.map('map').setView([43.261290083983944, -1.9529219919471679], 10);
-        var markers = L.markerClusterGroup();
+        var markers = L.markerClusterGroup({
+            iconCreateFunction: function(cluster) {
+                 var childCount = cluster.getChildCount();
+                 var c = ' marker-cluster-';
+                 if (childCount < 10) {
+                   c += 'small';
+                 }
+                 else if (childCount < 100) {
+                   c += 'small';
+                 }
+                 else {
+                   c += 'small';
+                 }
+                return new L.divIcon({ html: '<div><span>' + childCount + '</span></div>',
+                                        className: 'marker-cluster' + c, iconSize: new L.Point(40, 40)  });
+            }
+        });
         var markersWeather = L.markerClusterGroup();
+        var markersCamping = L.markerClusterGroup({
+            iconCreateFunction: function(cluster) {
+                 var childCount = cluster.getChildCount();
+                 var c = ' marker-cluster-';
+                 if (childCount < 10) {
+                   c += 'medium';
+                 }
+                 else if (childCount < 100) {
+                   c += 'medium';
+                 }
+                 else {
+                   c += 'medium';
+                 }
+                return new L.divIcon({ html: '<div><span>' + childCount + '</span></div>',
+                                        className: 'marker-cluster' + c, iconSize: new L.Point(40, 40)  });
+            }
+        });
         //osm layer
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -129,6 +183,26 @@
             zoomOffset: -1
         }).addTo(map);
 
+        ////// Camping
+        var LeafIconCamping = L.Icon.extend({
+            options: {
+                iconSize:     [50, 50],
+                iconAnchor:   [0, 0],
+                popupAnchor:  [-0, -0]
+            }
+        });
+
+        {% for spot in camping %}
+            var img = "https://cdn-icons-png.flaticon.com/512/1054/1054092.png"
+            var campingIcon = new LeafIconCamping({iconUrl: img});
+            markersCamping.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: campingIcon})
+                .bindPopup("<a href=#>{{ spot.title }}</a><br>" +
+            "Herria: {{ spot.town }} <br>" +
+            "webgunea: # <br>" +
+            "telefonoa: # <br>"
+             ));
+        {% endfor %}
+
 
         {% for spot in climbingspot %}
         window.addEventListener('load', function(name){
@@ -147,6 +221,7 @@
 
             })
         })
+
         markers.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}])
                     .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
                 "Arkaitza: {{ spot.stone }} <br>" +
@@ -155,6 +230,7 @@
         {% endfor %}
         map.addLayer(markers);
         map.addLayer(markersWeather);
+        map.addLayer(markersCamping);
 
         var LeafIcon = L.Icon.extend({
             options: {
@@ -164,15 +240,13 @@
                 popupAnchor:  [-3, -76]
             }
         });
-    var overlayMaps = {
-        "Eskalada guneak": markers,
-        "Eguraldia": markersWeather
-    };
+        var overlayMaps = {
+            "Eskalada guneak": markers,
+            "Eguraldia": markersWeather,
+            "Kanpina": markersCamping
+        };
 
-
-    L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
-
-
+        L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
 
         L.control.locate({
             flyTo: true,
