@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ClimbingSpot, Camping, Location, Video, MapBlog
+from .models import ClimbingSpot, Camping, Location, Video, MapBlog, Euskalmet
 
 
 # Register your models here.
@@ -23,8 +23,13 @@ class MapBlogAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
 
 
+class EuskalmetAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+
+
 admin.site.register(ClimbingSpot, ClimbingSpotAdmin)
 admin.site.register(Camping, CampingAdmin)
 admin.site.register(Location, LocationAdmin)
 admin.site.register(Video, VideoAdmin)
 admin.site.register(MapBlog, MapBlogAdmin)
+admin.site.register(Euskalmet, EuskalmetAdmin)

@@ -113,3 +113,24 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Euskalmet(models.Model):
+    title = models.CharField(max_length=200, null=True, blank=True, verbose_name='Izena')
+    town = models.CharField(max_length=200, null=True, blank=True, verbose_name='Herria')
+    desc = models.CharField(max_length=200, null=True, blank=True, verbose_name='Deskribapena')
+    text = models.CharField(max_length=200, null=True, blank=True, verbose_name='Text')
+    tempMax = models.FloatField(null=True, blank=True, verbose_name='temp max')
+    tempMin = models.FloatField(null=True, blank=True, verbose_name='temp min')
+    latitude = models.FloatField(null=True, blank=True, verbose_name='Latitudea')
+    longitude = models.FloatField(null=True, blank=True, verbose_name='Longitudea')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Sortze data')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Edizio data')
+
+    class Meta:
+        verbose_name = "Euskalmet"
+        verbose_name_plural = "Euskalmet"
+        ordering = ["created"]
+
+    def __str__(self):
+        return self.title

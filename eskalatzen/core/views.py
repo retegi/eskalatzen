@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ClimbingSpot, Camping, Video, MapBlog
+from .models import ClimbingSpot, Camping, Video, MapBlog, Euskalmet
 
 
 # Create your views here.
@@ -9,8 +9,9 @@ def home(request):
 
 def maps(request):
     climbingspot = ClimbingSpot.objects.all()
+    euskalmet = Euskalmet.objects.all()
     camping = Camping.objects.all()
-    return render(request, "core/map.html", {'climbingspot': climbingspot, 'camping': camping})
+    return render(request, "core/map.html", {'climbingspot': climbingspot, 'camping': camping, 'euskalmet': euskalmet})
 
 
 def lista(request):

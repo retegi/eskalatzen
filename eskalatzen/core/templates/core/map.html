@@ -5,6 +5,8 @@
 {% block title %}Hasiera{% endblock %}
 
 {% block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <style>
         .marker-cluster-small {
         background-color: rgba(50, 94, 244, 0.6);
@@ -26,7 +28,17 @@
         background-color: rgba(241, 128, 23, 0.6);
         }
     </style>
-    <div id="map" style="width: 1460x; height: 525px; position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
+    <style>
+        body {
+            padding: 5;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 92%;
+            width: 100vw;
+        }
+    </style>
+    <div id="map" style="position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
         <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
           <div class="leaflet-pane leaflet-tile-pane">
             <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
@@ -106,6 +118,7 @@
             }
         });
         var markersWeather = L.markerClusterGroup();
+        var markersEuskalmet = L.markerClusterGroup();
         var markersCamping = L.markerClusterGroup({
             iconCreateFunction: function(cluster) {
                  var childCount = cluster.getChildCount();
@@ -172,8 +185,6 @@
             "Google Satellite": googleSat,
         };
 
-        // map.removeLayer(singleMarker)
-
         var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -228,9 +239,6 @@
                 "Zailtasuna: {{ spot.difficulty }} III / 8a"
                 ));
         {% endfor %}
-        map.addLayer(markers);
-        map.addLayer(markersWeather);
-        map.addLayer(markersCamping);
 
         var LeafIcon = L.Icon.extend({
             options: {
@@ -240,10 +248,82 @@
                 popupAnchor:  [-3, -76]
             }
         });
+
+
+window.addEventListener("load", function meteoForecast() {
+  var headers =
+  {
+    'accept':'application/json',
+    'Authorization': "Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtZXQwMS5hcGlrZXkiLCJpc3MiOiJUZWNuYWxpYSIsImV4cCI6MTY3NjIwNDc1OCwidmVyc2lvbiI6IjEuMC4wIiwiaWF0IjoxNjM4NDQ3OTU4LCJlbWFpbCI6ImFwcHMuaW5mcmEudGVjbmFsaWFAZ21haWwuY29tIn0.eVQczqFuUDXqSqE4bbc8XYxTxBuNnlJWnpf2dKd2cj9CNFJ6U6N3svz5rFrgpGqskwhkqEo4Bi7w-zgxFu4x_tYzeMX351guT0AFBjVWikCHXXRrPDf1rMJkTD_rNScIFyHHqhXdZ31vE8iJ9Z8zQiAFBUa8bkyehqX-C_96-CQmBBEh4bWW_P6-5nSMrrHH19-8dhT9bGeInXxPnGKBFqiwjJfsrqhpi4Ee6lvCyyeQD0ZJmnRozzqlr80r9N61WwHdWXpez3pdxElFsZ-zOkixkztqo157eTvRyPA1GchX1K3eTkQsLWPExtIZwcydXIYnxH1glWPIKLycLAfiOQ"
+  };
+  var options = {
+    'method' : 'get',
+    'contentType': 'application/json',
+    'headers': headers,
+    'muteHttpExceptions': true
+  };
+  const options_ = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+  var today = new Date();
+  console.log(today.toLocaleString(undefined, options_));
+  console.log(today);
+  var month = today.getMonth() + 1;
+  if (month < 10)
+  {month = "0" + month};
+
+  var date = today.getFullYear() + "/" + month + "/" + today.getDate();
+  var date2 = today.getFullYear() + month + today.getDate();
+  console.log(date);
+  var urls = "https://api.euskadi.eus/euskalmet/weather/regions/basque_country/forecast/at/" + date + "/for/" + date2;
+  console.log(urls);
+
+  const response = fetch(urls, options);
+
+  fetch(urls, options)
+  .then(response => response.json())
+  .then(data => {
+        const root = document.getElementById('root');
+        const tempTabla = document.getElementById('tempTabla');
+
+        console.log(data);
+        console.log(data['forecastTextByLang']['BASQUE']);
+        console.log(data['citiesTemperatureRange'].length);
+        var htmlTabla= "";
+        for (var i=0; i < data['citiesTemperatureRange'].length; i++){
+        console.log(data['citiesTemperatureRange'][i]['temperature']['min']);
+        console.log(data['citiesTemperatureRange'][i]['temperature']['max']);
+        let location = data['citiesTemperatureRange'][i]['locationId'];
+        {% for spot in euskalmet %}
+            if (location.includes('{{ spot.town }}')) {
+                    console.log('{{ spot.town }} {{ spot.latitude }} {{ spot.longitude }}');
+                var img = "http://api.euskadi.eus/appcont/meteorologia/meteodat/images/00.png"
+
+
+                var weatherIcon = new LeafIcon({iconUrl: img});
+                markersEuskalmet.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}));
+            }
+        {% endfor %}
+        }
+        console.log(htmlTabla);
+        var forecastTextBasque = data['forecastTextByLang']['BASQUE'];
+        var html = "<p>" + forecastTextBasque + "</p>";
+        //root.innerHTML = html;
+        //tempTabla.innerHTML = htmlTabla;
+
+        });
+
+}, false);
+
+        map.addLayer(markers);
+        map.addLayer(markersWeather);
+        map.addLayer(markersCamping);
+        map.addLayer(markersEuskalmet);
+
         var overlayMaps = {
             "Eskalada guneak": markers,
             "Eguraldia": markersWeather,
-            "Kanpina": markersCamping
+            "Kanpina": markersCamping,
+            "Euskalmet": markersEuskalmet
         };
 
         L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
@@ -256,6 +336,7 @@
         map.on('mouseover', function () {
         console.log('your mouse is over the map')
         })
+
 
     </script>
 {% endblock %}

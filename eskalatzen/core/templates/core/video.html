@@ -5,22 +5,29 @@
 {% block title %}Video{% endblock %}
 
 {% block content %}
-    <div style="width:800px; margin:0 auto;">
-    {% for video in videos %}
-
-        <h1>{{ video.title }}</h1>
+<br></br>
+<div class="container">
+  <div class="row">
+      {% for video in videos %}
+      {% if forloop.counter <= 10 %}
+    <div class="col" align="center">
+        <h8>{{ video.title }}</h8>
         <br></br>
+
         {% if 1 == forloop.counter %}
-            <iframe width="420" height="315"
+            <iframe width="320" height="220"
                 src="https://www.youtube.com/embed/{{ video.link }}?autoplay=1&mute=1">
             </iframe>
         {% else %}
-            <iframe width="420" height="315"
+            <iframe width="320" height="220"
                 src="https://www.youtube.com/embed/{{ video.link }}">
             </iframe>
         {% endif %}
-        <br></br>
-    {% endfor %}
     </div>
+      {% endif %}
+      {% endfor %}
+  </div>
+</div>
+
 
 {% endblock %}
