@@ -214,14 +214,30 @@
              ));
         {% endfor %}
 
+        const d = new Date();
+        let hour = d.getHours();
+        let icon_code = "";
 
         {% for spot in climbingspot %}
         window.addEventListener('load', function(name){
             fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
             .then(response => response.json())
             .then(data => {
-            var iconValue = data['daily'][0]['weather'][0]['icon'];
-            var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png"
+             console.log(data);
+            if (data['cod'] != 429){
+            {% for owm in owms %}
+                icon_code = data['daily'][0]['weather'][0]['icon'];
+                if (hour > 21 || hour < 6){
+                    icon_code = icon_code.replace("d", "n");
+                }
+                if ("{{ owm.owm }}" == icon_code){
+                    console.log(icon_code);
+                    var img = "{{ owm.path }}";
+                }
+            {% endfor %}
+            console.log(img);
+            //var iconValue = data['daily'][0]['weather'][0]['icon'];
+            //var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png"
             console.log(img);
             console.log('{{ spot.town }}');
             var weatherIcon = new LeafIcon({iconUrl: img});
@@ -230,8 +246,9 @@
                 "Zailtasuna: {{ spot.difficulty }} III / 8a"
                 ));
 
-            })
+            }})
         })
+
 
         markers.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}])
                     .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
@@ -240,12 +257,10 @@
                 ));
         {% endfor %}
 
-        var LeafIcon = L.Icon.extend({
+        var LeafIconEuskalmet = L.Icon.extend({
             options: {
-                iconSize:     [95, 95],
-                shadowSize:   [50, 64],
-                iconAnchor:   [22, 94],
-                popupAnchor:  [-3, -76]
+                iconSize:     [70, 70],
+                iconAnchor:   [40, 80],
             }
         });
 
@@ -296,10 +311,10 @@ window.addEventListener("load", function meteoForecast() {
         {% for spot in euskalmet %}
             if (location.includes('{{ spot.town }}')) {
                     console.log('{{ spot.town }} {{ spot.latitude }} {{ spot.longitude }}');
-                var img = "http://api.euskadi.eus/appcont/meteorologia/meteodat/images/00.png"
+                var img = "https://www.euskalmet.euskadi.eus/meteoassets/icons/euskalmet/i00d.svg"
 
 
-                var weatherIcon = new LeafIcon({iconUrl: img});
+                var weatherIcon = new LeafIconEuskalmet({iconUrl: img});
                 markersEuskalmet.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}));
             }
         {% endfor %}

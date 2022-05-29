@@ -134,3 +134,20 @@ class Euskalmet(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class OpenWeatherMap(models.Model):
+    title = models.CharField(max_length=200, null=True, blank=True, verbose_name='Izena')
+    owm = models.CharField(max_length=200, null=True, blank=True, verbose_name='code')
+    path = models.CharField(max_length=200, null=True, blank=True, verbose_name='webpath')
+    icon = models.ImageField(null=True, blank=True, verbose_name='Icon', upload_to="projects")
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Sortze data')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Edizio data')
+
+    class Meta:
+        verbose_name = "OpenWeatherMap"
+        verbose_name_plural = "OpenWeatherMap"
+        ordering = ["created"]
+
+    def __str__(self):
+        return self.title

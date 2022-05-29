@@ -30,6 +30,7 @@ urlpatterns = [
     path('Gipuzkoa/Amasola/', core_view.amasola, name="Jentilbaratza"),
     path('lista/', core_view.lista, name="lista"),
     path('news/', core_view.news, name="news"),
+    path('ikastaroak/', core_view.ikastaroak, name="ikastaroak"),
     path('mapBlog/', core_view.blog, name="blog"),
     path('about/', core_view.about, name="about"),
     path('weather/', core_view.weather, name="eguraldia"),

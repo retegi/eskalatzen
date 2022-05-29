@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Ikastaroak{% endblock %}
+
+{% block content %}
+<div class="jumbotron vertical-center">
+
+<div class="container">
+    <h1>Gipuazkoako Mendi Federazioko Ikastaroak</h1>
+
+    <div>
+      <object
+        data='https://www.gmf.eus/galeria/2022/2022ko%20GGMEko%20egutegia.pdf'
+        type="application/pdf"
+        width="500"
+        height="678"
+      >
+
+        <iframe
+          src='https://www.gmf.eus/galeria/2022/2022ko%20GGMEko%20egutegia.pdf'
+          width="500"
+          height="678"
+        >
+        <p>This browser does not support PDF!</p>
+        </iframe>
+      </object>
+    </div>
+</div>
+</div>
+{% endblock %}

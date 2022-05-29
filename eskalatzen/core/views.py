@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import ClimbingSpot, Camping, Video, MapBlog, Euskalmet
+from .models import ClimbingSpot, Camping, Video, MapBlog, \
+    Euskalmet, OpenWeatherMap
 
 
 # Create your views here.
@@ -11,7 +12,11 @@ def maps(request):
     climbingspot = ClimbingSpot.objects.all()
     euskalmet = Euskalmet.objects.all()
     camping = Camping.objects.all()
-    return render(request, "core/map.html", {'climbingspot': climbingspot, 'camping': camping, 'euskalmet': euskalmet})
+    owms = OpenWeatherMap.objects.all()
+    return render(request, "core/map.html", {'climbingspot': climbingspot,
+                                             'camping': camping,
+                                             'euskalmet': euskalmet,
+                                             'owms': owms})
 
 
 def lista(request):
@@ -80,3 +85,7 @@ def weather(request):
 def video(request):
     videos = Video.objects.all()
     return render(request, "core/video.html", {'videos': videos})
+
+
+def ikastaroak(request):
+    return render(request, "core/courses.html")
