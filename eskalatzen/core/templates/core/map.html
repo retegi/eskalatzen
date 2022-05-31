@@ -217,6 +217,13 @@
         const d = new Date();
         let hour = d.getHours();
         let icon_code = "";
+        var LeafIconWeather = L.Icon.extend({
+            options: {
+                iconSize:     [80, 80],
+                iconAnchor:   [0, 0],
+                popupAnchor:  [-0, -0]
+            }
+        });
 
         {% for spot in climbingspot %}
         window.addEventListener('load', function(name){
@@ -240,7 +247,7 @@
             //var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png"
             console.log(img);
             console.log('{{ spot.town }}');
-            var weatherIcon = new LeafIcon({iconUrl: img});
+            var weatherIcon = new LeafIconWeather({iconUrl: img});
             markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
                 "Arkaitza: {{ spot.stone }} <br>" +
                 "Zailtasuna: {{ spot.difficulty }} III / 8a"

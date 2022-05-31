@@ -17,6 +17,7 @@ class ClimbingSpot(models.Model):
     image2 = models.ImageField(null=True, blank=True, verbose_name='Irudia 2', upload_to="projects")
     image3 = models.ImageField(null=True, blank=True, verbose_name='Irudia 3', upload_to="projects")
     image4 = models.ImageField(null=True, blank=True, verbose_name='Irudia 4', upload_to="projects")
+    source = models.CharField(max_length=200, null=True, blank=True, verbose_name='jatorria')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Sortze data')
     updated = models.DateTimeField(auto_now=True, verbose_name='Edizio data')
 

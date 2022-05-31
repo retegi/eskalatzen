@@ -89,3 +89,6 @@ def video(request):
 
 def ikastaroak(request):
     return render(request, "core/courses.html")
+
+def data(request):
+    return render(request, "core/data.html")

@@ -32,6 +32,7 @@ urlpatterns = [
     path('news/', core_view.news, name="news"),
     path('ikastaroak/', core_view.ikastaroak, name="ikastaroak"),
     path('mapBlog/', core_view.blog, name="blog"),
+    path('data/', core_view.data, name="data"),
     path('about/', core_view.about, name="about"),
     path('weather/', core_view.weather, name="eguraldia"),
     path('video/', core_view.video, name="video"),
