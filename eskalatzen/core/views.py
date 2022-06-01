@@ -1,9 +1,28 @@
 from django.shortcuts import render
+from django.utils.translation import gettext as _
+from django.utils.translation import get_language, activate, gettext
+
 from .models import ClimbingSpot, Camping, Video, MapBlog, \
     Euskalmet, OpenWeatherMap
 
 
 # Create your views here.
+def lang(request):
+    trans = translate(language='fr')
+    return render(request, 'core/lang.html', {'trans': trans})
+
+
+def translate(language):
+    cur_language = get_language()
+    try:
+        activate(language)
+        text = gettext('hello')
+    finally:
+        activate(cur_language)
+    return text
+
+
+
 def home(request):
     return render(request, "core/home.html")
 
@@ -89,6 +108,7 @@ def video(request):
 
 def ikastaroak(request):
     return render(request, "core/courses.html")
+
 
 def data(request):
     return render(request, "core/data.html")

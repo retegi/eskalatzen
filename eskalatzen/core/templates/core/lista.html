@@ -2,23 +2,23 @@
 
 {% load static %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}Lista{% endblock %}
 
 {% block content %}
 
+<div class="jumbotron vertical-center">
 <div class="container" style="width:800px; margin:0 auto; text-align: center;">
-  <table class="table" style="width:50%" >
+<div class="table-responsive-md">
+  <table class="table table-white table-striped">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Puntuazioa</th>
-          <th scope="col" class="d-none d-sm-block">Herrialdea</th>
-          <th scope="col" class="d-none d-sm-block">Autonomi Erkidegoa</th>
-          <th scope="col" class="d-none d-sm-block">Probintzia</th>
-          <th scope="col" class="d-none d-sm-block">Herria</th>
+          <th scope="col">Probintzia</th>
+          <th scope="col">Herria</th>
           <th scope="col">Sektorea</th>
-          <th scope="col" class="d-none d-sm-block">Arkaitza</th>
-          <th scope="col" class="d-none d-sm-block">Zailtasuna</th>
+          <th scope="col">Arkaitza</th>
+          <th scope="col">Zailtasuna</th>
         </tr>
       </thead>
       <tbody>
@@ -33,17 +33,17 @@
                 <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4star"></span>
                 <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5star"></span>
             </td>
-          <td class="d-none d-sm-block">{{spot.country}}</td>
-          <td class="d-none d-sm-block">{{spot.ccaa}}</td>
-          <td class="d-none d-sm-block">{{spot.province}}</td>
-          <td class="d-none d-sm-block">{{spot.town}}</td>
+          <td>{{spot.province}}</td>
+          <td>{{spot.town}}</td>
           <td><a href="{{ spot.province }}/{{ spot.title }}">{{spot.title}}</a></td>
-          <td class="d-none d-sm-block">{{spot.stone}}</td>
-          <td class="d-none d-sm-block">{{spot.difficulty}}</td>
+          <td>{{spot.stone}}</td>
+          <td>{{spot.difficulty}}</td>
         </tr>
       {% endfor %}
       </tbody>
     </table>
+</div>
+</div>
 </div>
 <script type="text/javascript">
 var contador;

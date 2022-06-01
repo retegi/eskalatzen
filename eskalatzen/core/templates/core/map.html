@@ -219,41 +219,42 @@
         let icon_code = "";
         var LeafIconWeather = L.Icon.extend({
             options: {
-                iconSize:     [80, 80],
-                iconAnchor:   [0, 0],
+                iconSize:     [100, 100],
+                iconAnchor:   [10, 0],
                 popupAnchor:  [-0, -0]
             }
         });
 
         {% for spot in climbingspot %}
         window.addEventListener('load', function(name){
-            fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+            //fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+            fetch('https://api.openweathermap.org/data/2.5/weather?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&units=metric&appid=32ce3717017406682b290a5dd99fbc99&lang=eu')
             .then(response => response.json())
             .then(data => {
              console.log(data);
-            if (data['cod'] != 429){
-            {% for owm in owms %}
-                icon_code = data['daily'][0]['weather'][0]['icon'];
-                if (hour > 21 || hour < 6){
-                    icon_code = icon_code.replace("d", "n");
-                }
-                if ("{{ owm.owm }}" == icon_code){
-                    console.log(icon_code);
-                    var img = "{{ owm.path }}";
-                }
-            {% endfor %}
-            console.log(img);
-            //var iconValue = data['daily'][0]['weather'][0]['icon'];
-            //var img = "http://openweathermap.org/img/wn/"+iconValue+"@2x.png"
-            console.log(img);
-            console.log('{{ spot.town }}');
-            var weatherIcon = new LeafIconWeather({iconUrl: img});
-            markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
-                "Arkaitza: {{ spot.stone }} <br>" +
-                "Zailtasuna: {{ spot.difficulty }} III / 8a"
-                ));
+             console.log(data['cod']);
+             console.log(icon_code = data['weather'][0]['icon']);
+            if (data['cod'] == 200){
+                {% for owm in owms %}
+                    icon_code = data['weather'][0]['icon'];
+                    if (hour > 21 || hour < 6){
+                        icon_code = icon_code.replace("d", "n");
+                    }
+                    if ("{{ owm.owm }}" == icon_code){
+                        console.log("owm_code", icon_code);
+                        var img = "{{ owm.path }}";
+                    }
+                {% endfor %}
+                console.log(img);
+                console.log('{{ spot.town }}');
+                var weatherIcon = new LeafIconWeather({iconUrl: img});
+                markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                    "Arkaitza: {{ spot.stone }} <br>" +
+                    "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                    ));
 
-            }})
+            }
+            })
         })
 
 

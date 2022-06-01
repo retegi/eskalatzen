@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from core import views as core_view
-
+from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
+    path('lang', core_view.lang, name="lang"),
     path('', core_view.maps, name="home"),
     path('Gipuzkoa/Aritxulegi/', core_view.aritxulegi, name="aritxulegi"),
     path('Gipuzkoa/Pikoketa/', core_view.pikoketa, name="pikoketa"),
@@ -38,6 +39,7 @@ urlpatterns = [
     path('video/', core_view.video, name="video"),
     path('admin/', admin.site.urls),
 ]
+
 
 if settings.DEBUG:
     from django.conf.urls.static import static
