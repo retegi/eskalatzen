@@ -1,0 +1,140 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/altsasu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "altsasu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/araia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "araia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/arratzu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "arratzu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/asparrena",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "asparrena"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/barrundia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "barrundia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/boveda",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "boveda"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/etxarri-aranatz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "etxarri-aranatz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/irurtzun",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "irurtzun"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/kuartango",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "kuartango"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/legutio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "legutio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/leintz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "leintz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/leitza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "leitza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/lekunberri",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "lekunberri"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/murgia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "murgia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/murua",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "murua"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/otxandio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "otxandio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/ozaeta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "ozaeta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/ubide",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "ubide"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/uharte_arakil",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "uharte_arakil"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/urkabuskaiz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "urkabuskaiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/zalduondo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "zalduondo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/zigoitia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "zigoitia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_mountains/locations/zuia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_mountains",
+    "regionZoneLocationId": "zuia"
+  }
+]

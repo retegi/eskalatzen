@@ -4,6 +4,7 @@ from django.utils.translation import get_language, activate, gettext
 
 from .models import ClimbingSpot, Camping, Video, MapBlog, \
     Euskalmet, OpenWeatherMap
+from django.views.generic.detail import DetailView
 
 
 # Create your views here.
@@ -20,7 +21,6 @@ def translate(language):
     finally:
         activate(cur_language)
     return text
-
 
 
 def home(request):
@@ -112,3 +112,16 @@ def ikastaroak(request):
 
 def data(request):
     return render(request, "core/data.html")
+
+
+class PostDetailView(DetailView):
+    model = ClimbingSpot
+    template_name = 'detail_view.html'
+
+    def get_context_data(self, **kwargs):
+        name = self.kwargs['pk']
+        context = super().get_context_data(**kwargs)
+        context['climbingspots'] = ClimbingSpot.objects.all()
+        print(f"name {name}")
+        context['climbingspot'] = ClimbingSpot.objects.filter(title=name)
+        return context

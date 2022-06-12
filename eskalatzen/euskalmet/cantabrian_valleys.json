@@ -1,0 +1,986 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/abadino",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "abadino"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/abaltzisketa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "abaltzisketa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/abanto",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "abanto"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/aduna",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "aduna"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/aiara",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "aiara"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ajangiz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ajangiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/albiztur",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "albiztur"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/aldude",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "aldude"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/alegia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "alegia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/alkiza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "alkiza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/alonsotegi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "alonsotegi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/altzaga",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "altzaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/altzo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "altzo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/amezketa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "amezketa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/amorebieta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "amorebieta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/amurrio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "amurrio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/andoain",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "andoain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/anoeta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "anoeta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/antzuola",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "antzuola"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arakaldo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arakaldo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arama",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arama"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/aramaio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "aramaio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arantzazu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arantzazu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/areatza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "areatza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/aretxabaleta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "aretxabaleta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arrankudiaga",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arrankudiaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arrasate",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arrasate"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arrieta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arrieta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/arrigorriaga",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "arrigorriaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/artea",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "artea"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/artzentales",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "artzentales"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/artziniega",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "artziniega"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/asparrena",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "asparrena"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/asteasu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "asteasu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/astigarraga",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "astigarraga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ataun",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ataun"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/atxondo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "atxondo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/aulesti",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "aulesti"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/azkoitia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "azkoitia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/azpeitia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "azpeitia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/baigorri",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "baigorri"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/baliarrain",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "baliarrain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/balmaseda",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "balmaseda"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/basauri",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "basauri"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/beasain",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "beasain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/bedia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "bedia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/beizama",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "beizama"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/belauntza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "belauntza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/bera",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "bera"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/berastegi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "berastegi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/bergara",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "bergara"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/berriz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "berriz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/berrobi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "berrobi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/betelu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "betelu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/bidegoian",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "bidegoian"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/burgelu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "burgelu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/derio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "derio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/dima",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "dima"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/doneztebe",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "doneztebe"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/donibane_garazi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "donibane_garazi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/durango",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "durango"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/eibar",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "eibar"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/elciego",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "elciego"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/elduain",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "elduain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/elgeta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "elgeta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/elgoibar",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "elgoibar"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/elizondo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "elizondo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/elorrio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "elorrio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ermua",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ermua"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/errezil",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "errezil"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/errigoiti",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "errigoiti"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/eskoriatza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "eskoriatza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/etxebarri",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "etxebarri"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/etxebarria",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "etxebarria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ezkio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ezkio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/fruiz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "fruiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/gabiria",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "gabiria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/gaintza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "gaintza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/galdakao",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "galdakao"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/galdames",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "galdames"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/gamiz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "gamiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/garai",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "garai"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/gatika",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "gatika"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/gaztelu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "gaztelu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/goizueta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "goizueta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/gordexola",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "gordexola"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/guenes",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "guenes"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/hernani",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "hernani"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/hernialde",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "hernialde"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ibarra",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ibarra"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/idiazabal",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "idiazabal"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/igorre",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "igorre"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ikaztegieta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ikaztegieta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/irura",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "irura"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/itsasondo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "itsasondo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/iurreta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "iurreta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/izurtza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "izurtza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/kanbo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "kanbo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/karrantza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "karrantza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/kortezubi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "kortezubi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lanestosa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lanestosa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/larrabetzu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "larrabetzu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/larraul",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "larraul"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lasarte",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lasarte"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/laudio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "laudio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/laukiz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "laukiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lazkao",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lazkao"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/leaburu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "leaburu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/legazpi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "legazpi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/legorreta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "legorreta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lemoa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lemoa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lesaka",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lesaka"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lezama",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lezama"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/lizartza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "lizartza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/loiu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "loiu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/mallabia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "mallabia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/manaria",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "manaria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/markina",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "markina"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/maule",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "maule"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/menaka",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "menaka"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/mendaro",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "mendaro"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/mendata",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "mendata"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/morga",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "morga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/mungia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "mungia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/munitibar",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "munitibar"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/mutiloa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "mutiloa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/muxika",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "muxika"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/nabarniz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "nabarniz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/oiartzun",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "oiartzun"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/okondo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "okondo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/olaberria",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "olaberria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/onati",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "onati"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ordizia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ordizia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/orendain",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "orendain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/orexa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "orexa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ormaiztegi",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ormaiztegi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/orozko",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "orozko"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ortuella",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ortuella"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/segura",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "segura"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/sodupe",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "sodupe"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/sondika",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "sondika"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/sopuerta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "sopuerta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/soraluze",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "soraluze"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/tolosa",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "tolosa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/trapagaran",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "trapagaran"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/turtzioz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "turtzioz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ugao",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ugao"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/urduna",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "urduna"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/urnieta",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "urnieta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/urretxu",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "urretxu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ustaritz",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ustaritz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/villabona",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "villabona"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zaldibar",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zaldibar"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zaldibia",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zaldibia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zalla",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zalla"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zamudio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zamudio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zaratamo",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zaratamo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zeanuri",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zeanuri"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zeberio",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zeberio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zegama",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zegama"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zerain",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zerain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/ziortza",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "ziortza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zizurkil",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zizurkil"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/cantabrian_valleys/locations/zumarraga",
+    "regionId": "basque_country",
+    "regionZoneId": "cantabrian_valleys",
+    "regionZoneLocationId": "zumarraga"
+  }
+]

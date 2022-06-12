@@ -1,0 +1,86 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/antoniana",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "antoniana"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/arraia",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "arraia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/azazeta",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "azazeta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/bernedo",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "bernedo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/harana",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "harana"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/iturrieta",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "iturrieta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/kanpezu",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "kanpezu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/lagran",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "lagran"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/larraona",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "larraona"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/lezaun",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "lezaun"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/maeztu",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "maeztu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/navarrete",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "navarrete"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/urizaharra",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "urizaharra"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/southern_mountain/locations/zudairi",
+    "regionId": "basque_country",
+    "regionZoneId": "southern_mountain",
+    "regionZoneLocationId": "zudairi"
+  }
+]

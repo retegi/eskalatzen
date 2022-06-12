@@ -1,0 +1,194 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/andosilla",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "andosilla"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/arminon",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "arminon"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/bastida",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "bastida"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/berantevilla",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "berantevilla"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/bilar",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "bilar"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/caparroso",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "caparroso"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/carcastillo",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "carcastillo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/cascante",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "cascante"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/cintruenigo",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "cintruenigo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/erriberabeitia",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "erriberabeitia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/eskuernaga",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "eskuernaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/falces",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "falces"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/kripan",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "kripan"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/laguardia",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "laguardia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/lantaron",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "lantaron"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/lantziego",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "lantziego"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/lapuebla",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "lapuebla"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/lerin",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "lerin"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/leza",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "leza"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/lodosa",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "lodosa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/manueta",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "manueta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/mendavia",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "mendavia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/moreda",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "moreda"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/navaridas",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "navaridas"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/oion",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "oion"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/olite",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "olite"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/samaniego",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "samaniego"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/tafalla",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "tafalla"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/tekora",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "tekora"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/tudela",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "tudela"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/viana",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "viana"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/ebro_valley/locations/zambrana",
+    "regionId": "basque_country",
+    "regionZoneId": "ebro_valley",
+    "regionZoneLocationId": "zambrana"
+  }
+]

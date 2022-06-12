@@ -1,0 +1,20 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/donostialdea/locations/donostia",
+    "regionId": "basque_country",
+    "regionZoneId": "donostialdea",
+    "regionZoneLocationId": "donostia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/donostialdea/locations/errenteria",
+    "regionId": "basque_country",
+    "regionZoneId": "donostialdea",
+    "regionZoneLocationId": "errenteria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/donostialdea/locations/pasaia",
+    "regionId": "basque_country",
+    "regionZoneId": "donostialdea",
+    "regionZoneLocationId": "pasaia"
+  }
+]

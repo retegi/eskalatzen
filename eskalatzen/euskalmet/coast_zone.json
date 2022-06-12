@@ -1,0 +1,296 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/aia",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "aia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/aizarna",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "aizarna"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/aizarnazabal",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "aizarnazabal"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/amoroto",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "amoroto"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/baiona",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "baiona"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/bakio",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "bakio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/barrika",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "barrika"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/berango",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "berango"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/bermeo",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "bermeo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/berriatua",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "berriatua"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/biarritz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "biarritz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/busturia",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "busturia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/deba",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "deba"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/donibane_lohizune",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "donibane_lohizune"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/ea",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "ea"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/elantxobe",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "elantxobe"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/ereno",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "ereno"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/forua",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "forua"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/gautegiz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "gautegiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/gernika",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "gernika"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/getaria",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "getaria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/gizaburuaga",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "gizaburuaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/gorliz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "gorliz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/hendaia",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "hendaia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/hondarribia",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "hondarribia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/ibarrangelu",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "ibarrangelu"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/irun",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "irun"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/ispaster",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "ispaster"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/lekeitio",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "lekeitio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/lemoiz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "lemoiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/lezo",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "lezo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/maruri",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "maruri"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/mendexa",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "mendexa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/mundaka",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "mundaka"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/murueta",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "murueta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/muskiz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "muskiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/mutriku",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "mutriku"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/ondarroa",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "ondarroa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/orio",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "orio"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/plentzia",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "plentzia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/santurtzi",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "santurtzi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/sopelana",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "sopelana"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/sukarrieta",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "sukarrieta"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/urduliz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "urduliz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/usurbil",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "usurbil"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/zarautz",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "zarautz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/zestoa",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "zestoa"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/zierbena",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "zierbena"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/coast_zone/locations/zumaia",
+    "regionId": "basque_country",
+    "regionZoneId": "coast_zone",
+    "regionZoneLocationId": "zumaia"
+  }
+]

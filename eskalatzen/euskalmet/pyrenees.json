@@ -1,0 +1,62 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/abaurreagaina",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "abaurreagaina"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/auritz",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "auritz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/erronkari",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "erronkari"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/eugi",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "eugi"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/izaba",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "izaba"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/larrau",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "larrau"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/luzaide",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "luzaide"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/orreaga",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "orreaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/otsagabia",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "otsagabia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/pyrenees/locations/uztarroze",
+    "regionId": "basque_country",
+    "regionZoneId": "pyrenees",
+    "regionZoneLocationId": "uztarroze"
+  }
+]

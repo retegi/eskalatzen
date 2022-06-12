@@ -18,17 +18,12 @@ from django.urls import path, include
 from django.conf import settings
 from core import views as core_view
 from django.conf.urls.i18n import i18n_patterns
+
+
 urlpatterns = [
     path('lang', core_view.lang, name="lang"),
     path('', core_view.maps, name="home"),
-    path('Gipuzkoa/Aritxulegi/', core_view.aritxulegi, name="aritxulegi"),
-    path('Gipuzkoa/Pikoketa/', core_view.pikoketa, name="pikoketa"),
-    path('Gipuzkoa/Putakio/', core_view.putakio, name="putakio"),
-    path('Gipuzkoa/Santa/', core_view.santabarbara, name="SantaBarbara"),
-    path('Gipuzkoa/Txindoki/', core_view.txindoki, name="Txindoki"),
-    path('Gipuzkoa/Jaizkibel/', core_view.jaizkibel, name="Jaizkibel"),
-    path('Gipuzkoa/Jentilbaratza/', core_view.jentilbaratza, name="Jentilbaratza"),
-    path('Gipuzkoa/Amasola/', core_view.amasola, name="Jentilbaratza"),
+    path('', include('core.urls')),
     path('lista/', core_view.lista, name="lista"),
     path('news/', core_view.news, name="news"),
     path('ikastaroak/', core_view.ikastaroak, name="ikastaroak"),

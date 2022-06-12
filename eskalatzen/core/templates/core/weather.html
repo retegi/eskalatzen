@@ -45,21 +45,7 @@ function Euskalmet(city, tempmax, tempmin) {
   this.tempmin = tempmin;
 }
 
-
-
-
-//  regionId: basque_country
-//  regionZoneId:
-//      cantabrian_mountains
-//      cantabrian_valleys
-//      coast_zone
-//      donostialdea
-//      ebro_valley
-//      great_bilbao
-//      interior_basins
-//      pyrenees
-//      southern_mountain
-//      vitoria_gasteiz
+// https://api.sandbox.euskadi.eus/euskalmet/geo/regions/{{spot.regionId}}/zones/{{spot.zoneId}}/locations/{{spot.locId}}
 
 window.addEventListener("load", function meteoStationReadings() {
   var headers =

@@ -141,7 +141,11 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
         osm.addTo(map);
-        // map.addLayer(osm)
+
+        var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        });
+        //OpenTopoMap.addTo(map);
 
         // water color
         var watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
@@ -179,10 +183,11 @@
         ================================================*/
         var baseMaps = {
             "OSM": osm,
-            "Water color map": watercolor,
+            //"Water color map": watercolor,
             'Dark': dark,
             'Google Street': googleStreets,
             "Google Satellite": googleSat,
+            "Topo Map": OpenTopoMap,
         };
 
         var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -207,10 +212,10 @@
             var img = "https://cdn-icons-png.flaticon.com/512/1054/1054092.png"
             var campingIcon = new LeafIconCamping({iconUrl: img});
             markersCamping.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: campingIcon})
-                .bindPopup("<a href=#>{{ spot.title }}</a><br>" +
+                .bindPopup("<a href={{ spot.website }}>{{ spot.title }}</a><br>" +
             "Herria: {{ spot.town }} <br>" +
-            "webgunea: # <br>" +
-            "telefonoa: # <br>"
+            "webgunea: <a href={{ spot.website }}>{{ spot.website }}</a><br>" +
+            "telefonoa: {{ spot.phone }}  <br>"
              ));
         {% endfor %}
 
@@ -225,52 +230,127 @@
             }
         });
 
-        {% for spot in climbingspot %}
-        window.addEventListener('load', function(name){
-            //fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
-            fetch('https://api.openweathermap.org/data/2.5/weather?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&units=metric&appid=32ce3717017406682b290a5dd99fbc99&lang=eu')
-            .then(response => response.json())
-            .then(data => {
-             console.log(data);
-             console.log(data['cod']);
-             console.log(icon_code = data['weather'][0]['icon']);
-            if (data['cod'] == 200){
-                {% for owm in owms %}
-                    icon_code = data['weather'][0]['icon'];
-                    if (hour > 21 || hour < 6){
-                        icon_code = icon_code.replace("d", "n");
-                    }
-                    if ("{{ owm.owm }}" == icon_code){
-                        console.log("owm_code", icon_code);
-                        var img = "{{ owm.path }}";
-                    }
-                {% endfor %}
-                console.log(img);
-                console.log('{{ spot.town }}');
-                var weatherIcon = new LeafIconWeather({iconUrl: img});
-                markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
-                    "Arkaitza: {{ spot.stone }} <br>" +
-                    "Zailtasuna: {{ spot.difficulty }} III / 8a"
-                    ));
-
-            }
-            })
-        })
-
-
-        markers.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}])
-                    .bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
-                "Arkaitza: {{ spot.stone }} <br>" +
-                "Zailtasuna: {{ spot.difficulty }} III / 8a"
-                ));
-        {% endfor %}
-
         var LeafIconEuskalmet = L.Icon.extend({
             options: {
                 iconSize:     [70, 70],
                 iconAnchor:   [40, 80],
             }
         });
+
+window.addEventListener("load", function meteoForecast() {
+  var headers =
+  {
+    'accept':'application/json',
+    'Authorization': "Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtZXQwMS5hcGlrZXkiLCJpc3MiOiJUZWNuYWxpYSIsImV4cCI6MTY3NjIwNDc1OCwidmVyc2lvbiI6IjEuMC4wIiwiaWF0IjoxNjM4NDQ3OTU4LCJlbWFpbCI6ImFwcHMuaW5mcmEudGVjbmFsaWFAZ21haWwuY29tIn0.eVQczqFuUDXqSqE4bbc8XYxTxBuNnlJWnpf2dKd2cj9CNFJ6U6N3svz5rFrgpGqskwhkqEo4Bi7w-zgxFu4x_tYzeMX351guT0AFBjVWikCHXXRrPDf1rMJkTD_rNScIFyHHqhXdZ31vE8iJ9Z8zQiAFBUa8bkyehqX-C_96-CQmBBEh4bWW_P6-5nSMrrHH19-8dhT9bGeInXxPnGKBFqiwjJfsrqhpi4Ee6lvCyyeQD0ZJmnRozzqlr80r9N61WwHdWXpez3pdxElFsZ-zOkixkztqo157eTvRyPA1GchX1K3eTkQsLWPExtIZwcydXIYnxH1glWPIKLycLAfiOQ"
+  };
+  var options = {
+    'method' : 'get',
+    'contentType': 'application/json',
+    'headers': headers,
+    'muteHttpExceptions': true
+  };
+
+          const options_ = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+          var today = new Date();
+          console.log(today.toLocaleString(undefined, options_));
+          console.log(today);
+          var month = today.getMonth() + 1;
+          var day = today.getDate();
+          if (month < 10)
+          {month = "0" + month};
+
+          if (day < 10)
+          {day = "0" + day};
+
+          var date = today.getFullYear() + "/" + month + "/" + day;
+          var date2 = today.getFullYear() + month + day;
+
+        {% for spot in climbingspot %}
+            {% if spot.enable %}
+
+            var url = "https://api.euskadi.eus/euskalmet/weather/regions/{{spot.regionId}}/zones/{{spot.zoneId}}/locations/{{spot.locId}}/forecast/trends/at/" + date + "/for/" + date2;
+            var response2 = fetch(url, options);
+
+              fetch(url, options)
+              .then(response2 => response2.json())
+              .then(data => {
+                console.log(data);
+                var days = data["trendsByDate"]["set"];
+                for (i=0;i<days.length;i++)
+                {
+                    var day_trend = days[i]["date"].split("-")[2].split("T")[0]
+                    if (day == day_trend)
+                    {
+                        {% for owm in owms %}
+                            if ("{{ owm.euskalmet }}" == days[i]["weather"]["id"])
+                            {
+                                var euskalmet_code = days[i]["weather"]["id"];
+                                var img = "https://www.euskalmet.euskadi.eus/appcont/meteorologia/meteodat/images/" + euskalmet_code + ".png"
+                                var img = "https://www.euskalmet.euskadi.eus/meteoassets/icons/euskalmet/{{ owm.euskalmet_new }}.svg"
+                                //console.log(img2);
+                            }
+                        {% endfor %}
+                    }
+                }
+                console.log(img, {{spot.latitude}}, {{spot.longitude}});
+
+                var weatherIcon = new LeafIconEuskalmet({iconUrl: img});
+                markersEuskalmet.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}));
+
+              })
+            {% endif %}
+        {% endfor %}
+
+        }, false);
+        ////////////////// endEuskalmet
+
+        {% for spot in climbingspot %}
+            {% if spot.enable %}
+
+            window.addEventListener('load', function(name){
+                //fetch('https://api.openweathermap.org/data/2.5/onecall?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&&exclude=current,hourly,minutely,alerts&units=metric&appid=32ce3717017406682b290a5dd99fbc99')
+                fetch('https://api.openweathermap.org/data/2.5/weather?lat={{ spot.latitude }}&&lon={{ spot.longitude }}&units=metric&appid=32ce3717017406682b290a5dd99fbc99&lang=eu')
+                .then(response => response.json())
+                .then(data => {
+                 console.log(data);
+                 console.log(data['cod']);
+                 console.log(icon_code = data['weather'][0]['icon']);
+                if (data['cod'] == 200){
+                    {% for owm in owms %}
+                        icon_code = data['weather'][0]['icon'];
+                        if (hour > 21 || hour < 6){
+                            icon_code = icon_code.replace("d", "n");
+                        }
+                        if ("{{ owm.owm }}" == icon_code){
+                            console.log("owm_code", icon_code);
+                            var img = "{{ owm.path }}";
+                        }
+                    {% endfor %}
+                    console.log(img);
+                    console.log('{{ spot.town }}');
+                    var weatherIcon = new LeafIconWeather({iconUrl: img});
+                    markersWeather.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}).bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+                        "Arkaitza: {{ spot.stone }} <br>" +
+                        "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                        ));
+
+                }
+                })
+            })
+
+            console.log("{% url 'core:detail_view' spot.id %}");
+            markers.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}])
+                        .bindPopup("<a href="{% url 'core:detail_view' spot.id %}">{{ spot.title }}</a><br>" +
+                    "Arkaitza: {{ spot.stone }} <br>" +
+                    "Zailtasuna: {{ spot.difficulty }} III / 8a"
+                    ));
+                    //.bindPopup("<a href={{ spot.province }}/{{ spot.title }}>{{ spot.title }}</a><br>" +
+
+            {% endif %}
+        {% endfor %}
+
+
 
 
 window.addEventListener("load", function meteoForecast() {
@@ -308,30 +388,26 @@ window.addEventListener("load", function meteoForecast() {
         const root = document.getElementById('root');
         const tempTabla = document.getElementById('tempTabla');
 
+        console.log("Kaixo");
         console.log(data);
         console.log(data['forecastTextByLang']['BASQUE']);
         console.log(data['citiesTemperatureRange'].length);
         var htmlTabla= "";
         for (var i=0; i < data['citiesTemperatureRange'].length; i++){
-        console.log(data['citiesTemperatureRange'][i]['temperature']['min']);
-        console.log(data['citiesTemperatureRange'][i]['temperature']['max']);
-        let location = data['citiesTemperatureRange'][i]['locationId'];
-        {% for spot in euskalmet %}
-            if (location.includes('{{ spot.town }}')) {
-                    console.log('{{ spot.town }} {{ spot.latitude }} {{ spot.longitude }}');
-                var img = "https://www.euskalmet.euskadi.eus/meteoassets/icons/euskalmet/i00d.svg"
+            console.log(data['citiesTemperatureRange'][i]['temperature']['min']);
+            console.log(data['citiesTemperatureRange'][i]['temperature']['max']);
+            let location = data['citiesTemperatureRange'][i]['locationId'];
+            {% for spot in euskalmet %}
+                if (location.includes('{{ spot.town }}')) {
+                        console.log('{{ spot.town }} {{ spot.latitude }} {{ spot.longitude }}');
+                    var img = "https://www.euskalmet.euskadi.eus/meteoassets/icons/euskalmet/i00d.svg"
 
 
-                var weatherIcon = new LeafIconEuskalmet({iconUrl: img});
-                markersEuskalmet.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}));
-            }
-        {% endfor %}
+                    //var weatherIcon = new LeafIconEuskalmet({iconUrl: img});
+                    //markersEuskalmet.addLayer(L.marker([{{ spot.latitude }},{{ spot.longitude }}], {icon: weatherIcon}));
+                }
+            {% endfor %}
         }
-        console.log(htmlTabla);
-        var forecastTextBasque = data['forecastTextByLang']['BASQUE'];
-        var html = "<p>" + forecastTextBasque + "</p>";
-        //root.innerHTML = html;
-        //tempTabla.innerHTML = htmlTabla;
 
         });
 
@@ -350,6 +426,35 @@ window.addEventListener("load", function meteoForecast() {
         };
 
         L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
+
+        // create a red polygon from an array of LatLng points
+        var latlngs = [
+        [43.39331315693846, -1.7899676449060937],
+        [43.29568210994661, -1.7297933953698401],
+        [43.27636577758222, -1.792869845672187],
+        [43.245320138844164, -1.798524975699294],
+        [43.20687279331388, -1.8805985638339584],
+        [43.221447460161436, -1.9130687380851212],
+        [43.13438911044534, -1.9034042512985236],
+        [43.10413685247373, -1.954674254775563],
+        [42.980053241529625, -2.039349934710005],
+        [42.93617421849773, -2.178290543021023],
+        [43.02715939054782, -2.5102654513115055],
+        [43.138052003878265, -2.5021859630564394],
+        [43.1829085490213, -2.482715418405741],
+        [43.32318595094074, -2.410915777900156],
+        [43.311719831492724, -2.219716295878033],
+        [43.28741860143101, -2.166958518187822],
+        [43.37194496763773, -1.8624326190012657]];
+
+        var polygonGipuzkoa = L.polygon(latlngs, {color: 'blue',
+                                                  opacity: 0.6,
+                                                  fillOpacity: 0.2,
+                                                  interactive: true});
+        polygonGipuzkoa.addTo(map);
+
+        // zoom the map to the polygon
+        map.fitBounds(polygon.getBounds());
 
         L.control.locate({
             flyTo: true,

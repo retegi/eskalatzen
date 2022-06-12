@@ -1,0 +1,98 @@
+[
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/agurain",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "agurain"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/alegria",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "alegria"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/anana",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "anana"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/aoiz",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "aoiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/arratzua",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "arratzua"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/donemiliaga",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "donemiliaga"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/erriberagoitia",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "erriberagoitia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/espejo",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "espejo"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/gaubea",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "gaubea"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/irunia",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "irunia"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/iruraiz",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "iruraiz"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/lizarra",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "lizarra"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/lumbier",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "lumbier"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/oka",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "oka"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/pobes",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "pobes"
+  },
+  {
+    "key": "euskalmet/geo/regions/basque_country/zones/interior_basins/locations/zangoza",
+    "regionId": "basque_country",
+    "regionZoneId": "interior_basins",
+    "regionZoneLocationId": "zangoza"
+  }
+]
